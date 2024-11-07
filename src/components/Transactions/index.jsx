@@ -1,6 +1,10 @@
 import { Table } from 'antd'
 
 const Transactions = ({ transactions }) => {
+  const dataSource = transactions.map((transaction, idx) => ({
+    ...transaction,
+    key: idx
+  }))
   const columns = [
     {
       title: 'Name',
@@ -28,10 +32,11 @@ const Transactions = ({ transactions }) => {
       key: 'tag'
     }
   ]
+
   return (
     <Table
       className='container container-fluid'
-      dataSource={transactions}
+      dataSource={dataSource}
       columns={columns}
     />
   )

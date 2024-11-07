@@ -3,6 +3,7 @@ import Cards from '../components/Cards'
 import useModals from '../hooks/useModals'
 import AddExpense from '../components/Modals/AddExpense'
 import AddIncome from '../components/Modals/AddIncome'
+import Transactions from '../components/Transactions'
 import { useTransactions } from '../hooks/useTransactions'
 
 const DashboardView = () => {
@@ -28,6 +29,7 @@ const DashboardView = () => {
         expense={expense}
         balance={balance}
       />
+      <Transactions transactions={transactions} />
 
       <AddExpense
         isExpenseModalVisible={isExpenseModalVisible}

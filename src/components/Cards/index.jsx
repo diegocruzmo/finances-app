@@ -10,7 +10,7 @@ const Cards = ({
 }) => {
   return (
     <div className='container container-fluid'>
-      <Row className='cards mt-4'>
+      <Row className='cards mt-4 mb-4'>
         <Card
           className='shadow-sm p-2 bg-white rounded'
           title='Current Balance'
